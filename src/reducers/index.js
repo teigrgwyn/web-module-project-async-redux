@@ -1,4 +1,4 @@
-import { GET_DATA } from './../actions';
+import { FETCH_COINS_START, FETCH_COINS_SUCCESS, FETCH_COINS_FAILURE } from './../actions';
 
 export const initialState = {
 	placeholder: 0
@@ -6,7 +6,13 @@ export const initialState = {
 
 const reducer = (state = initialState, action) => {
 	switch(action.type) {
-		case(GET_DATA): return ({
+		case(FETCH_COINS_START): return ({
+			...state
+		})
+		case(FETCH_COINS_SUCCESS): return ({
+			...state
+		})
+		case(FETCH_COINS_FAILURE): return ({
 			...state
 		})
 		default: return state;

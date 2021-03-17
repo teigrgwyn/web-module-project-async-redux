@@ -1,8 +1,10 @@
 import React from 'react';
 
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import reducer from './reducers/index';
+/* import logger from 'redux-logger'; */
+import thunk from 'redux-thunk';
 
 import DisplayData from './components/DisplayData';
 
@@ -10,12 +12,13 @@ import './App.css';
 
 function App() {
 	return (
-		<Provider store={createStore(reducer)}>
+		/* <Provider store={createStore(reducer, applyMiddleware(logger))}> */
+		<Provider store={createStore(reducer, applyMiddleware(thunk))}>
 			<div id='app'>
 				<DisplayData />
 			</div>
 		</Provider>
-	);
+	)
 }
 
 export default App;
