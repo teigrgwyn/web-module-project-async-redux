@@ -1,12 +1,20 @@
 import React from 'react';
 
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducer from './reducers/index';
+
+import DisplayData from './components/DisplayData';
+
 import './App.css';
 
 function App() {
 	return (
-		<div className="App">
-
-		</div>
+		<Provider store={createStore(reducer)}>
+			<div id='app'>
+				<DisplayData />
+			</div>
+		</Provider>
 	);
 }
 
