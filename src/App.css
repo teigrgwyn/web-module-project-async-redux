@@ -3,9 +3,30 @@
 	justify-content: center;
 }
 
-#button {
+#displaydata {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	margin-top: 2%;
 	padding: 5px;
-	width: 35%;
 	font-family: 'Balsamiq Sans'; /* doesn't assume body's font-family setting; need to explicitly set here? */
+}
+
+#button {
+	position: relative;
+	padding: 10px;
+}
+
+#pokemon {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 1%;
+}
+
+.poke {
+	margin: 1%;
+	padding: 1%;
+	border: 1px solid crimson;
+	color: lightslategray;
 }
